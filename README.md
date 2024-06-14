@@ -22,9 +22,11 @@
 
 # Getting Started
 
-**1. Clone**
+**1. Clone and set env variables**
 
 `git clone https://github.com/Eric-Muthemba/frontend`
+
+create an `.env` file  from the `.env.template` file and set the variables
 
 **2. Run `npm install` or `yarn install`**
 
