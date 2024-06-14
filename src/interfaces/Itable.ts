@@ -68,6 +68,7 @@ export interface IprescriptionsTable {
 export interface Iinventory {
    id: number | string;
    name: string;
+   description: string;
    quantity: number;
    price: number;
    createdById: string;
@@ -92,6 +93,7 @@ export type complex =
 ;
 
 export interface Itable {
+  path?:string;
   limit?: number;
   selectedCategory?: string;
   headData: string[];
@@ -100,7 +102,7 @@ export interface Itable {
     | Ipatient
     | Iinventory
     | Iprescriptions
-      | Iusers
+    | Iusers
 | Itransactions
   )[];
 }

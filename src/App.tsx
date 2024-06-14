@@ -10,12 +10,15 @@ import "./scss/App.scss";
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Patients = React.lazy(() => import("./pages/Patients"));
 const AddPatients = React.lazy(() => import("./pages/AddPatient"));
+const EditPatient = React.lazy(() => import("./pages/EditPatient"));
 
 const MedicalRecords = React.lazy(() => import("./pages/MedicalRecords"));
 const AddMedicalRecord = React.lazy(() => import("./pages/AddMedicalRecord"));
+const EditMedicalRecords = React.lazy(() => import("./pages/EditMedicalRecord"));
 
 const Inventory = React.lazy(() => import("./pages/Inventory"));
 const AddInventory = React.lazy(() => import("./pages/AddInventory"));
+const EditInventory = React.lazy(() => import("./pages/EditInventory"));
 
 
 const Prescriptions = React.lazy(() => import("./pages/Prescriptions"));
@@ -40,9 +43,13 @@ function App() {
                 <Route index element={<Dashboard />} />
                 <Route path="/patients" element={<Patients />} />
                 <Route path="/add-patient" element={<AddPatients />} />
+                {<Route path="/patients/:patientId" element={<EditPatient />} />}
                 {<Route path="/records" element={<MedicalRecords />} />}
+                {<Route path="/records/:medicalRecordId" element={<EditMedicalRecords />} />}
                 {<Route path="/add-medical-record" element={<AddMedicalRecord />} />}
                 {<Route path="/inventory" element={<Inventory />} />}
+                {<Route path="/inventory/:inventoryId" element={<EditInventory />} />}
+
                 {<Route path="/add_inventory" element={<AddInventory />} />}
                 {<Route path="/prescriptions" element={<Prescriptions />} />}
                 {<Route path="/transactions" element={<Transactions />} />}

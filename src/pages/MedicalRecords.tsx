@@ -29,7 +29,7 @@ function MedicalRecords() {
   if (status === "fetched" && data) {
 
     medicalRecordsTable = (
-      <CustomTable limit={10} headData={medicalRecordsHeader} bodyData={data.data} />
+      <CustomTable path="records" limit={10} headData={medicalRecordsHeader} bodyData={data.data} />
     );
   }
 

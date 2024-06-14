@@ -32,7 +32,7 @@ function Patients() {
   if (status === "fetched" && data) {
 
     patientsTable = (
-      <CustomTable limit={10} headData={patientsHeader} bodyData={data.data} />
+      <CustomTable path="patients" limit={10} headData={patientsHeader} bodyData={data.data} />
     );
   }
 

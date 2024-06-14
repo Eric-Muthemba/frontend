@@ -13,7 +13,7 @@ const CustomTable: React.FC<Props> = (props) => {
   function showModalHandler() {
     setShowModal((prev) => !prev);
   }
-  function tableBody(item: any, index: number, keys:string[]) {
+  function tableBody(item: any, index: number, keys:string[], path?: string) {
       console.log(item);
 
 
@@ -31,7 +31,7 @@ const CustomTable: React.FC<Props> = (props) => {
                         <Icon icon="fluent:delete-24-regular" width="24"/>
                       </div>
                       <div className={classes.actions__edit}>
-                        <Link to={`/products/`}>
+                        <Link to={`/${path}/${item.id}`}>
                           <Icon icon="fluent:edit-16-regular" width="24"/>
                         </Link>
                       </div>
@@ -54,15 +54,6 @@ const CustomTable: React.FC<Props> = (props) => {
   };
 
   const [dataShow, setDataShow] = useState(initDataShow);
-  // const [selectedCategory, setSelectedCategory] = useState(
-  //   props.selectedCategory
-  // );
-
-  // if (props.selectedCategory) {
-  //   if (selectedCategory !== props.selectedCategory)
-  //     setDataShow(props.bodyData);
-  // }
-  // setSelectedCategory(props.selectedCategory);
 
   let pages = 1;
 
@@ -115,7 +106,7 @@ const CustomTable: React.FC<Props> = (props) => {
                   </thead>
                 ) : null}
                 <tbody>
-                  {dataShow.map((item, index, keys) => tableBody(item, index, props.headData))}
+                  {dataShow.map((item, index, keys) => tableBody(item, index, props.headData,props.path))}
                 </tbody>
               </table>
             </div>

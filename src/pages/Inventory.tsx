@@ -29,7 +29,7 @@ function Inventory() {
   if (status === "fetched" && data) {
 
     inventoryTable = (
-      <CustomTable limit={10} headData={inventoryHeader} bodyData={data.data} />
+      <CustomTable path="inventory" limit={10} headData={inventoryHeader} bodyData={data.data} />
     );
   }
 
