@@ -24,7 +24,7 @@
 
 **1. Clone**
 
-`git clone`
+`git clone https://github.com/Eric-Muthemba/frontend`
 
 **2. Run `npm install` or `yarn install`**
 
