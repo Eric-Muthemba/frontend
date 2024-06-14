@@ -5,7 +5,7 @@ import CustomTable from "../components/tables/customTable/CustomTable";
 import { IprescriptionsTable } from "../interfaces/Itable";
 import { prescriptionsHeader } from "../constants/tables";
 import LoadingSpinner from "../components/UI/loadingSpinner/LoadingSpinner";
-const url = "http://localhost:8082/prescriptions";
+const url = `${process.env.REACT_APP_BackendURL}/prescriptions`;
 function Prescriptions() {
   const { t } = useTranslation();
   const { data, error, status } = useFetch<IprescriptionsTable>(url);

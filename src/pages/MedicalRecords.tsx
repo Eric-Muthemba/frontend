@@ -7,7 +7,8 @@ import { medicalRecordsHeader } from "../constants/tables";
 import LoadingSpinner from "../components/UI/loadingSpinner/LoadingSpinner";
 import {useNavigate} from "react-router-dom";
 import {Icon} from "@iconify/react";
-const url = "http://localhost:8082/medical_records";
+
+const url = `${process.env.REACT_APP_BackendURL}/medical_records`;
 function MedicalRecords() {
   const { t } = useTranslation();
   const { data, error, status } = useFetch<ImedicalRecordsTable>(url);

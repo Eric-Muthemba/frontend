@@ -6,7 +6,7 @@ import EditPage from "../components/edit/editPage";
 import { IinventoryTable } from "../interfaces/Itable";
 import LoadingSpinner from "../components/UI/loadingSpinner/LoadingSpinner";
 
-const url = "http://localhost:8082/inventory";
+const url = `${process.env.REACT_APP_BackendURL}/inventory`;
 
 function EditInventory() {
   const { t } = useTranslation();

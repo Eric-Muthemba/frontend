@@ -4,7 +4,7 @@ import AddPage from "../components/add/addPage";
 import {useNavigate} from "react-router-dom";
 import LoginContext from "../store/loginContext";
 
-const inventory_url = "http://localhost:8082/inventory";
+const inventory_url = `${process.env.REACT_APP_BackendURL}/inventory`;
 
 function AddInventory() {
   const { t } = useTranslation();

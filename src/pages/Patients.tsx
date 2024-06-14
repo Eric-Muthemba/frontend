@@ -8,7 +8,9 @@ import LoadingSpinner from "../components/UI/loadingSpinner/LoadingSpinner";
 import { Icon } from '@iconify/react';
 import {useNavigate} from "react-router-dom";
 
-const url = "http://localhost:8082/patients";
+const url = `${process.env.REACT_APP_BackendURL}/patients`;
+
+console.log(process.env)
 
 function Patients() {
   const { t } = useTranslation();

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import AddPage from "../components/add/addPage";
 import {useNavigate} from "react-router-dom";
 import LoginContext from "../store/loginContext";
-const patients_url = "http://localhost:8082/patients";
+const patients_url = `${process.env.REACT_APP_BackendURL}/patients`;
 
 
 function AddPatient() {

@@ -8,7 +8,7 @@ import { patientsHeader } from "../constants/tables";
 import LoadingSpinner from "../components/UI/loadingSpinner/LoadingSpinner";
 import CustomTable from "../components/tables/customTable/CustomTable";
 
-const url = "http://localhost:8082/patients";
+const url = `${process.env.REACT_APP_BackendURL}/patients`;
 
 function EditPatient() {
   const { t } = useTranslation();

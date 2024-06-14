@@ -6,7 +6,7 @@ import EditPage from "../components/edit/editPage";
 import { ImedicalRecordsTable } from "../interfaces/Itable";
 import LoadingSpinner from "../components/UI/loadingSpinner/LoadingSpinner";
 
-const url = "http://localhost:8082/medical_records";
+const url = `${process.env.REACT_APP_BackendURL}/medical_records`;
 
 function EditMedicalRecord() {
   const { t } = useTranslation();

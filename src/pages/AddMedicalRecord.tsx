@@ -3,8 +3,9 @@ import { useTranslation } from "react-i18next";
 import AddPage from "../components/add/addPage";
 import { useNavigate } from "react-router-dom";
 import LoginContext from "../store/loginContext";
-const patients_url = "http://localhost:8082/patients";
-const medical_records_url = "http://localhost:8082/medical_records";
+
+const patients_url = `${process.env.REACT_APP_BackendURL}/patients`;
+const medical_records_url = `${process.env.REACT_APP_BackendURL}/medical_records`;
 
 function AddMedicalRecord() {
   const { t } = useTranslation();

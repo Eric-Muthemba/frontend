@@ -26,7 +26,7 @@ function LoginBox() {
       const password = passwordRef.current.value;
 
       try {
-        const response = await fetch("http://localhost:8082/auth/login", {
+        const response = await fetch(`${process.env.REACT_APP_BackendURL}/auth/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),

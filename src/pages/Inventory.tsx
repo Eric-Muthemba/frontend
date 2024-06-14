@@ -7,7 +7,7 @@ import { inventoryHeader } from "../constants/tables";
 import LoadingSpinner from "../components/UI/loadingSpinner/LoadingSpinner";
 import {Icon} from "@iconify/react";
 import {useNavigate} from "react-router-dom";
-const url = "http://localhost:8082/inventory";
+const url = `${process.env.REACT_APP_BackendURL}/inventory`;
 function Inventory() {
   const { t } = useTranslation();
   const { data, error, status } = useFetch<IinventoryTable>(url);

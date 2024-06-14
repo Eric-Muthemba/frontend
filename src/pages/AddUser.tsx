@@ -4,7 +4,7 @@ import AddPage from "../components/add/addPage";
 import {useNavigate} from "react-router-dom";
 import LoginContext from "../store/loginContext";
 
-const user_url = "http://localhost:8082/management/users";
+const user_url = `${process.env.REACT_APP_BackendURL}/management/users`;
 
 
 
